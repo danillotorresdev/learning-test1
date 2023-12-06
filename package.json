@@ -4,10 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 8001",
+    "dev": "vite",
+    "dev-exposed": "vite --port 5174 --host",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:docker": "docker build -t my-img ."
   },
   "dependencies": {
     "react": "^18.2.0",

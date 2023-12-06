@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  react-app:
+    image: react-app2-container
+    stdin_open: true
+    ports:
+      - "5174:5174"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - "./:/usr/src/app:delegated"
+      - "/usr/src/app/node_modules/"
